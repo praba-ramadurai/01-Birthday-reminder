@@ -1,10 +1,14 @@
-import './App.css';
+import { useState } from 'react';
+import data from './data';
+import List from './List';
 
 function App() {
+  const [people,setPeople]=useState(data);
   return (
-    <>
-    <h1>First Program</h1>
-    </>
+    <main>
+      {data}
+      <List people={people}/>
+    </main>
   );
 }
 
